@@ -1,4 +1,4 @@
-run_name: OLMo-10M
+run_name: OLMo-10M-local
 seed: 6198
 dry_run: false
 
@@ -60,7 +60,7 @@ scheduler:
   warmup_min_lr: 0
 
 tokenizer:
-  identifier: tokenizers/allenai_gpt-neox-olmo-dolma-v1_5.json
+  identifier: tokenizers/allenai_eleuther-ai-gpt-neox-20b-pii-special.json
   truncate_direction: right
 
 save_folder: workspace/${run_name}
@@ -161,4 +161,4 @@ data:
   persistent_workers: true
   timeout: 0
   paths:
-    - https://olmo-data.org/preprocessed/olmo-mix/v1_5/gpt-neox-20b-pii-special/part-000-00000.npy
+    - ../OLMo-data/part-000-00000.npy
